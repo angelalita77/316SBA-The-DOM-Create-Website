@@ -6,7 +6,7 @@ html, body {
     background: linear-gradient(
         135deg,
         rgb(211, 222, 242),
-        rgb(139, 215, 246)
+        rgb(71, 173, 214)
     );
 }
 
@@ -35,7 +35,7 @@ h1, h2 {
 #header {
     
     font-size: 2.5em;
-    background-color: #90bede;
+    background-color: #7fa7c3;
     padding: 0;
     margin: 0;
     height: 10%;
@@ -56,11 +56,11 @@ h1, h2 {
 }
 
 .app_container {
-    max-width: 540px;;
+    width: 100%;
+    width: 440px;
     min-height: 300px;
-    background-color: #e6e9f0;
+    background-color: #f4f6fa;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 2%;
-
 }
