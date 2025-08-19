@@ -59,8 +59,20 @@ h1, h2 {
     width: 100%;
     width: 440px;
     min-height: 300px;
-    background-color: #f4f6fa;
+    background-color: #faf6f4;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 2%;
+}
+
+
+li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    background-color: #eff7fc;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 3%;
 }
