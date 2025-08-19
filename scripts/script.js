@@ -17,6 +17,8 @@ function addTask(e) {
     // Checks if there is anything entered in text box
    if(task) {
     createTaskElement(task);
+    taskInput.value = ""; //empty textbox after adding task
+    taskInput.focus(); //keey cursor active in textbox after adding task
     
    } else { 
         // alert that nothing has been entered
