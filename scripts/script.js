@@ -4,8 +4,10 @@ const addTaskBtn = document.getElementById("submitTask"); // The "Add Task" butt
 const taskList = document.getElementById("taskList"); //The list will be created
 const urgentTask = document.getElementById("submitUrgent"); //The list will be created
 
+
 addTaskBtn.addEventListener('click', addTask);
 urgentTask.addEventListener('click', addUrgent);
+
 
 
 
@@ -42,6 +44,7 @@ function addUrgent(e) {
     taskInput.value = ""; //empty textbox after adding task
     taskInput.focus(); //keey cursor active in textbox after adding task
     
+    
    } else { 
         // alert that nothing has been entered
      taskInput.value = alert('You need to enter a task.')
@@ -53,14 +56,15 @@ function addUrgent(e) {
 function createTaskElement(task) {
     // create the <li></li> tags
     const listItem = document.createElement('li')
-    //console.log(listItem)
+    console.log(listItem)
     listItem.textContent = task;  // save the contents of task to listItem
     // add <li> element with task as a child to the <ul> list element
     taskList.appendChild(listItem);
-    
 }
 
+
 // Function to create an urgent task item
+// The item will be marked in red font color
 function createUrgentTaskElement(task) {
 
     // create the <li></li> tags
@@ -68,7 +72,6 @@ function createUrgentTaskElement(task) {
     //console.log(listItem)
     listItem.textContent = task;  // save the contents of task to listItem
     // urgent style directly on new urgent item
-
 
     // add <li> element with task as a child to the <ul> list element
     taskList.appendChild(listItem);
@@ -80,7 +83,10 @@ function createUrgentTaskElement(task) {
     console.log(endOfQueue);
 
     listItem.classList.add('urgent')
-    
+    return taskQueue;
 }
+
+
+
 
 
