@@ -8,6 +8,7 @@ addTaskBtn.addEventListener('click', addTask);
 urgentTask.addEventListener('click', addUrgent);
 
 
+
 //Function to retrieve task entered by user and then place task
 // in list
 function addTask(e) {
@@ -24,7 +25,7 @@ function addTask(e) {
     
    } else { 
         // alert that nothing has been entered
-     taskInput.value = alert('You need to enter a task.')
+    taskInput.value = alert('You need to enter a task.')
    }
 
 }
@@ -48,9 +49,8 @@ function addUrgent(e) {
 
 }
 
-
+// Function to create a task item
 function createTaskElement(task) {
-
     // create the <li></li> tags
     const listItem = document.createElement('li')
     //console.log(listItem)
@@ -60,15 +60,27 @@ function createTaskElement(task) {
     
 }
 
+// Function to create an urgent task item
 function createUrgentTaskElement(task) {
 
     // create the <li></li> tags
     const listItem = document.createElement('li')
     //console.log(listItem)
     listItem.textContent = task;  // save the contents of task to listItem
+    // urgent style directly on new urgent item
+
+
     // add <li> element with task as a child to the <ul> list element
     taskList.appendChild(listItem);
-    document.querySelector('li').style.backgroundColor = "#ffc2c2";
+
+    // After the task has been added, find out the position at the end of the list
+    // then change the text to red.
+    const taskQueue = document.querySelectorAll('li');
+    let endOfQueue = taskQueue.length - 1;
+    console.log(endOfQueue);
+
+    listItem.classList.add('urgent')
     
 }
+
 
